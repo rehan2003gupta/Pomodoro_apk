@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <img id="tick" src="tick-removebg-preview.png" alt="">
+            <h2>Pomofocus</h2>
+        </div>
+        <div class="rest_header">
+            <button id="assistant_button" class="assistant box">
+                <img id="tick1" src="report-removebg-preview.png" alt="">
+                <p class="head">Assistant</p>
+            </button>
+            <button  class="setting box">
+                <img id="tick1" src="setting-removebg-preview.png" alt="">
+                <div class="head">Setting</div>
+            </button>
+            <button class="signin box">
+                <img id="tick1" src="user-removebg-preview.png" alt="">
+                <div class="head">Sign In</div>
+            </button>
+            <button class="dark_mode box">
+                <div class="head">🌙</div>
+            </button>
+        </div>
+    </div>
+    <div class="progress-line-container">
+        <div class="progress-line" id="progress-bar"></div>
+    </div>
+    <div class="container">
+        <div class="container_header">
+            <div class="pomodoro container_btn">
+                <button class="id restart" >Pomodoro</button>
+            </div>
+            <div class="Short_break container_btn">
+                <button class="id sbreak">Short Break</button>
+            </div>
+            <div class="Long_break container_btn">
+                <button class="id lbreak">Long Break</button>
+            </div>
+        </div>
+        <div class="timer">
+           
+        </div>
+        <div class="control">
+            <button class="btn">START</button>
+            <button class="skip"><img id="skip_img" src="skip.png" alt=""></button>
+        </div>
+    </div>
+        
+    <div class="count">
+        <div class="cnt">
+            <p class="cnt_txt"></p>
+        </div>
+        <div class="text">
+            <p class="cnt_suggestion "></p>
+        </div>
+
+
+        <!-- FUTURE SCOPE -->
+
+        <!-- <div class="task">
+            <input type="text" id="task_input" placeholder="Add a task...">
+            <button class="add_task">ADD</button>
+        </div> -->
+
+
+    </div>  
+    <iframe id="assistant_frame" src="" style="display: none;" frameborder="0"></iframe>
+
+    <div class="overlay" id="overlay"></div>
+    <div class="modal" id="settingsModal">
+        <div class="modal-content">
+            <div class="heading"><h2>Settings</h2>
+            </div>
+            <div class="timer_head">
+                <p id="time_txt">Timer</p>
+                <p id="time_min">Time (minutes)</p>
+            </div>
+            <div class="content_header">
+                <div class="header_box">
+                    <p id="header_box_txt">Pomodoro</p>
+                </div>
+                <div class="header_box">
+                    <p id="header_box_txt">Short Break</p>
+                </div>
+                <div class="header_box">
+                    <p id="header_box_txt">Long Break</p>
+                </div>
+            </div>
+            <div class="time_setting">
+                <input type="number" id="numberBox1" min="25" max="50" step="1" value="25">
+                <input type="number" id="numberBox2" min="5" max="10" step="1" value="5">
+                <input type="number" id="numberBox3" min="15" max="30" step="1" value="15">
+            </div>
+        </div>
+
+        <!-- FUTURE SCOPE -->
+         
+        <!-- <div class="second_div">
+            <p id="auto_breaks">
+                Auto Switch Breaks
+            </p>
+            <label class="switch">
+                <input type="checkbox" id="toggleSwitch1">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="second_div">
+            <p id="auto_breaks">
+                Auto Start Pomodoros
+            </p>
+            <label class="switch">
+                <input type="checkbox" id="toggleSwitch2">
+                <span class="slider"></span>
+            </label>
+        </div> -->
+
+
+        <div class="fourth_div">
+            <p id="long_break_interval">
+                Long Break Interval
+            </p>
+            <input type="number" id="numberBox4" min="4" max="10" step="1" value="4">
+        </div>
+        <div class="sounds">
+            <p id="sound_heading">
+                SOUND
+            </p>
+            <div class="alarm_sound">
+                <p id="alarm_sound_txt">
+                    Alarm Sound
+                </p>
+                <select name="alarms" id="alarm_options">
+                    <option value="kitchen">Kitchen</option>
+                    <option value="wood">Wood</option>
+                    <option value="bell">Bell</option>
+                    <option value="bird">Bird</option>
+                    <option value="digital">Digital</option>
+                  </select>
+            </div>
+            <div class="repeat">
+                <span class="repeat_heading" >Repeat</span>
+                <input type="number" id="repeat_alarm" min="0" max="5" value="1">
+            </div>
+        </div>
+        
+
+        <!-- FUTURE SCOPE -->
+         
+        <!-- <div class="themes">
+                <p id="theme_heading">
+                    THEME
+                </p>
+                <div class="color">
+                    <span class="pomodaro_color color_heading">Pomodaro Color</span>
+                    <div class="theme_box">
+                        <div class="theme1 theme "></div>
+                        <div class="theme2 theme "></div>
+                        <div class="theme3 theme "></div>
+                        <div class="theme4 theme"></div>
+                        <div class="theme5 theme"></div>
+                        <div class="theme6 theme"></div>
+                    </div>
+                </div>
+                <div class="color">
+                    <span class="Short_Break_color color_heading">Short Break Color</span>
+                    <div class="theme_box">
+                        <div class="theme7 theme "></div>
+                        <div class="theme8 theme "></div>
+                        <div class="theme9 theme "></div>
+                        <div class="theme10 theme"></div>
+                        <div class="theme11 theme"></div>
+                        <div class="theme12 theme"></div>
+                    </div>
+                </div>
+                <div class="color">
+                    <span class="Long_Break__color color_heading">Long Break Color</span>
+                    <div class="theme_box">
+                        <div class="theme13 theme "></div>
+                        <div class="theme14 theme "></div>
+                        <div class="theme15 theme "></div>
+                        <div class="theme16 theme"></div>
+                        <div class="theme17 theme"></div>
+                        <div class="theme18 theme"></div>
+                    </div>
+                </div>
+        </div> -->
+       
+        
+        <button class="save-btn">Save</button>
+    </div>
+    <div class="middle_section">
+        <div class="middle_color">
+        <p class="middle_section_heading">An online Pomodoro Timer to boost your productivity</p>
+        <p class="ques1 q"><u>Wh</u>at is Pomofocus?</p>
+        <p class="ans1 ans">Pomofocus is a customizable pomodoro timer that works on desktop & mobile browser. 
+            The aim of this app is to help you focus on any task you are working on,such as study, writing, or coding.
+            This app is inspired by <a href="https://www.pomodorotechnique.com/" id="link_txt">Pomodoro Technique</a>
+            which is a time management method developed by Francesco Cirillo.</p>
+        <p class="ques2 q"><u>Wh</u>at is Pomodoro Technique?</p>
+        <p class="ans2  ans">
+            The Pomodoro Technique is created by Francesco Cirillo for a more productive way to work and study.
+            The technique uses a timer to break down work into intervals, traditionally 25 minutes in length, separated by short breaks.
+            Each interval is known as a pomodoro, from the Italian word for 'tomato', after the tomato-shaped kitchen timer that Cirillo used as a university student. -
+            <a href="https://en.wikipedia.org/wiki/Pomodoro_Technique" id="link_txt">Wikipedia</a>
+        </p>
+        <p class="ques3 q"><u>Ho</u>w to use the Pomodoro Timer?</p>
+        
+            <p class="ans3">1. Add tasks to work on today</p>
+            <p class="ans3">2. Set estimate pomodoros (1 = 25min of work) for each tasks</p>
+            <p class="ans3">3. Select a task to work on</p>
+            <p class="ans3">4. Start timer and focus on the task for 25 minutes</p>
+            <p class="ans3">5. Take a break for 5 minutes when the alarm ring</p>
+            <p class="ans3">6. Iterate 3-5 until you finish the tasks</p>
+        
+        <p class="ques4 q"><u>Ba</u>sic Features</p>
+            <p class="ans3">• Estimate Finish Time: Get an estimate of the time required to complete your daily tasks.</p>
+            <p  class="ans3">• Add Templates: Save your repetitive tasks as templates and add them with just one click.</p>
+            <p class="ans3">• Visual Reports: See how much time you've focused each day, week, and month.</p>
+            <p class="ans3">• Custom Settings: Personalize your focus/break time, alarm sounds, background sounds, and more.</p>
+        <p class="ques5 q"><u>Pr</u>emium Features</p>
+        <p class="ans3">• Add Projects: Track how much time you spend on each project.</p>
+        <p class="ans3">• Yearly Reports: View your focus hours for each year.</p>
+        <p class="ans3">• Download Reports: Download your focus history in CSV format.</p>
+        <p class="ans3">• No Template Limit: Save more than 3 templates.</p>
+        <p class="ans3">• Todoist Integration: Load tasks from your Todoist account.</p>
+        <p  class="ans3">• Webhook Integration: Connect to other apps (Zapier, IFTTT, etc).</p>
+        <p class="ans3">• No Ads: Enjoy a clean and distraction-free app experience.</p>    
+
+        <p class="Download q"><u>Do</u>wnload App</p>
+
+            <p class="ans3">For Mac:	<span id="gap_txt">Coming Soon...</span></p>
+            <p class="ans3">For Windows:	<a href="pomofocus-1.1.0-win-x64.zip" id="link_txt">pomofocus-1.1.0-win-x64.zip</a></p>
+            <p class="ans3">For Linux:	<a href="pomofocus-1.1.0-lin-amd64.zip" id="link_txt" class="gap">pomofocus-1.1.0-lin-amd64.zip</a></p>
+        <p class="important"> Important: For Windows, you may see a warning message about the app being unsafe.
+            This is because the app is not signed with a developer certificate. For Windows, you can proceed by clicking "Details" and then "Run anyway".</p>
+    </div>
+</div>
+    <div class="footer">
+        <span id="footer_heading"><a href="#" id="footer_links">HOME</a></span>
+        <span id="footer_heading"><a href="privacy.html" id="footer_links">PRIVACY</a></span>
+        <span id="footer_heading"><a href="terms.html" id="footer_links">TERMS</a></span>
+        <span id="footer_heading"><a href="commerce.html" id="footer_links">COMMERCE</a></span>
+        <span id="footer_heading"><a href="contact.html" id="footer_links">CONTACT</a></span>
+        <span id="footer_heading"><a href="#" id="footer_links">SIMPLE PAGE</a></span>
+    </div>
+    <div class="logos">
+        <div class="img1">
+            <a href="#"><img src="facebook_img.png" alt="" id="image"></a>
+        </div>
+        <div class="img">
+            <a href="https://x.com/RehanGupta71830" ><img src="twitter_img.png" alt="" id="image"></a>
+        </div>
+        <div class="img">
+            <a href="https://www.instagram.com/gupta_s_gallery/"><img src="insta_img.png" alt="" id="image"></a>
+        </div>
+    </div>
+    <div class="made_by">
+        <p id="made_with">Made by -> <a href="https://www.linkedin.com/in/rehan-gupta-54374130a/" id="designer"> Rehan Gupta</a></p>
+        <p id="copyright">©Pomofocus 2025. All Rights Reserved.</p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
